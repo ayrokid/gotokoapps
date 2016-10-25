@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Slides, NavController } from 'ionic-angular';
 
 import { Home } from '../home/home';
-import { Page1 } from '../page1/page1';
+
 /*
   Generated class for the Slides page.
 
@@ -55,6 +55,6 @@ export class Welcome {
   goHome() {
     //this.rootPage = Home;
     //this.navCtrl.setRoot(Home);
-    this.navCtrl.setRoot(Page1);
+    this.navCtrl.setRoot(Home);
   }
 }

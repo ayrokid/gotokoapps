@@ -18,8 +18,25 @@
   //background-color: #368bff;
   //color: #ffffff;
 }
-ion-menu ion-header {
-  background-color: transparent;
+.pull-right {
+  float: right;
+}
+.contact:hover {
+  cursor: pointer;
+}
+ion-menu {
+  margin-top: 55px;
+}
+
+ion-menu ion-header ion-toolbar ion-icon {
+  //display: none;
+  //height: 1px;
+  padding-left: 20px;
+}
+
+ion-navbar img {
+  height: 40px;
+  margin-left: 20px;
 }
 ion-menu ion-toolbar img {
   //display: none;
@@ -38,3 +55,15 @@ $colors: (
   gray: #999,
   orange: #F44336
 );
+ 
+$list-background-color: #fff;
+$list-ios-activated-background-color: #3aff74;
+$list-md-activated-background-color: #3aff74;
+ 
+$checkbox-ios-background-color-on: #32db64;
+$checkbox-ios-icon-border-color-on: #fff;
+ 
+$checkbox-md-icon-background-color-on: #32db64;
+$checkbox-md-icon-background-color-off: #fff;
+$checkbox-md-icon-border-color-off: #cecece;
+$checkbox-md-icon-border-color-on: #32db64;

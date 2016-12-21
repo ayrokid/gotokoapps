@@ -20,7 +20,7 @@
 
 
 <ion-content>
-  <button ion-button class="icon-back"><ion-icon name="arrow-back"></ion-icon></button>
+  <button (click)="back()" ion-button class="icon-back"><ion-icon name="arrow-back"></ion-icon></button>
   <div padding [@flyInBottomFast]="cloudState" id="cloud-layer">
     
     <ion-row>

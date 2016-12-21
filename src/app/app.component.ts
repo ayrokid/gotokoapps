@@ -7,9 +7,14 @@ import { Page2 } from '../pages/page2/page2';
 import { Welcome } from '../pages/welcome/welcome';
 import { Home } from '../pages/home/home';
 import { Login } from '../pages/login/login';
+import { Imaps } from '../pages/imaps/imaps';
+
+//Providers
+//import { MySignal } from '../providers/my-signal';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  //providers: [MySignal]
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
@@ -21,21 +26,25 @@ export class MyApp {
   constructor(public platform: Platform) {
     this.initializeApp();
 
+    
+
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: Home },
       { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 }
+      { title: 'Page Two', component: Page2 },
+      { title: 'Maps', component: Imaps }
     ];
 
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.hideSplashScreen();
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
-      Splashscreen.hide();
+      //Splashscreen.hide();
     });
   }
 
@@ -47,5 +56,13 @@ export class MyApp {
 
   loginPage() {
     this.nav.setRoot(Login);
+  }
+
+  hideSplashScreen() {
+    if (Splashscreen) {
+      setTimeout(() => {
+        Splashscreen.hide();
+        }, 100);
+      }
   }
 }

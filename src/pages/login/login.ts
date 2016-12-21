@@ -73,4 +73,8 @@ export class Login {
     console.log('Hello Login Page');
   }
 
+  back() {
+    
+  }
+
 }
